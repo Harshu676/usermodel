@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Registration Html Page</title>
+{% endblock %}
+
+{% block body_block %}
+    <div class='container'>
+        <div class='jumbotron'>
+                <center>
+                    <h1>Registration Form</h1>
+                    <form method="POST">
+                        {% csrf_token %}
+                            {{user_form.as_p}}
+                            {{profile_form.as_p}}
+
+                        <input type="submit" value="Register" class="btn btn-success">
+                    </form>
+
+
+
+                </center>
+        </div>
+    </div>
+
+{% endblock %}
